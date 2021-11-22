@@ -1,0 +1,9 @@
+{
+  "name": "frontend-project",
+  "version": "1.0.0",
+  "author": "Olzhas Kaliyev <olzhas.kaliyev.90@gmail.com> (https://github.com/olzhaskaliyev)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
