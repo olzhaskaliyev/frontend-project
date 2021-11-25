@@ -1,29 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./styles/main.scss";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="App">
-      <header className="App-header">
-        <img
-          src={require("./assets/logo.svg")}
-          className="App-logo"
-          alt="logo"
-        />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link btn btn-primary"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -11,6 +11,9 @@ const config = {
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   optimization: {
     runtimeChunk: "single",
     splitChunks: {
